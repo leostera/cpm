@@ -1,0 +1,35 @@
+#!/usr/bin/python
+
+from cpm import CpmCli
+
+###############################################################################
+#
+# The actual runnable program starts below.
+#
+###############################################################################
+
+if __name__ == "__main__":
+
+  OPARSER = optparse.OptionParser(
+  description="A little package manager for C/C++",
+  usage='Usage: %prog install',
+  version = "%prog 0.0.1",
+  epilog="Feel free to contribute at https://github.com/leostera/cpm"
+  )
+
+  OPARSER.add_option("-f", "--file", dest="file",
+                    help="use FILE as package descriptor")
+
+  (OPTIONS, ARGS) = OPARSER.parse_args()
+
+  CPM_RUNNER = None
+  
+  if len(ARGS) == 0:
+      CPM_RUNNER = CpmCli()
+  elif OPTIONS.directory:
+      CPM_RUNNER = CpmCli(OPTIONS.file)
+
+  if CPM_RUNNER:
+      CPM_RUNNER.run()
+  else:
+      print "Holy BUGS Batman!"

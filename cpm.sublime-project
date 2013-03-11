@@ -1,0 +1,17 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+      "folder_exclude_patterns": ["bin", "include", "lib"],
+      "file_exclude_patterns": [".Python", "*.sublime-*"]
+    },
+    {
+      "path": "./cpm/bin"
+    }
+  ],
+  "settings": {
+    "tab_sizes": 2,
+    "translate_tabs_to_spaces": true
+  }
+}

@@ -1,0 +1,4 @@
+hgapi>=1.4
+Dulwich>=0.8
+http://pysvn.barrys-emacs.org/source_kits/pysvn-1.7.7.tar.gz
+PyYAML>=3
