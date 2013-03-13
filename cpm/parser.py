@@ -8,6 +8,7 @@ class Parser(object):
     self.arg = arg
 
   def load(self, filename):
+    """Load a file and generate the command lists needed"""
     with open(filename) as datafile:
       self.raw = tomlpython.parse(datafile)
     return
