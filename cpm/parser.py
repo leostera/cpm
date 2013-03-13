@@ -8,6 +8,7 @@ class Parser(object):
     self.arg = arg
 
   def load(self, filename):
-    self.raw = tomlpython.parse(filename)
+    with open(filename) as datafile:
+      self.raw = tomlpython.parse(datafile)
     return
     
